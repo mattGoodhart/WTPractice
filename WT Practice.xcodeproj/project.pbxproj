@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		74DDE687281B2FF200927102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE686281B2FF200927102 /* AppDelegate.swift */; };
 		74DDE689281B2FF200927102 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE688281B2FF200927102 /* SceneDelegate.swift */; };
-		74DDE68B281B2FF200927102 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE68A281B2FF200927102 /* ViewController.swift */; };
+		74DDE68B281B2FF200927102 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE68A281B2FF200927102 /* HomeViewController.swift */; };
 		74DDE68E281B2FF200927102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DDE68C281B2FF200927102 /* Main.storyboard */; };
 		74DDE690281B2FF400927102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74DDE68F281B2FF400927102 /* Assets.xcassets */; };
 		74DDE693281B2FF400927102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DDE691281B2FF400927102 /* LaunchScreen.storyboard */; };
 		74DDE69E281B2FF400927102 /* WT_PracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE69D281B2FF400927102 /* WT_PracticeTests.swift */; };
 		74DDE6A8281B2FF400927102 /* WT_PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE6A7281B2FF400927102 /* WT_PracticeUITests.swift */; };
 		74DDE6AA281B2FF400927102 /* WT_PracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE6A9281B2FF400927102 /* WT_PracticeUITestsLaunchTests.swift */; };
+		74DDE6B7281B3A2200927102 /* API Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE6B6281B3A2200927102 /* API Response.swift */; };
+		74DDE6B9281B3D9A00927102 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE6B8281B3D9A00927102 /* Networking.swift */; };
+		74DDE6BB281B49D500927102 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE6BA281B49D500927102 /* Model.swift */; };
+		74DDE6BD281B515700927102 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE6BC281B515700927102 /* CollectionViewCell.swift */; };
+		74DDE6BF281B522B00927102 /* GameBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE6BE281B522B00927102 /* GameBoardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +44,7 @@
 		74DDE683281B2FF200927102 /* WT Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WT Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DDE686281B2FF200927102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74DDE688281B2FF200927102 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		74DDE68A281B2FF200927102 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		74DDE68A281B2FF200927102 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		74DDE68D281B2FF200927102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74DDE68F281B2FF400927102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74DDE692281B2FF400927102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,11 @@
 		74DDE6A3281B2FF400927102 /* WT PracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WT PracticeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DDE6A7281B2FF400927102 /* WT_PracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WT_PracticeUITests.swift; sourceTree = "<group>"; };
 		74DDE6A9281B2FF400927102 /* WT_PracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WT_PracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		74DDE6B6281B3A2200927102 /* API Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Response.swift"; sourceTree = "<group>"; };
+		74DDE6B8281B3D9A00927102 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		74DDE6BA281B49D500927102 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		74DDE6BC281B515700927102 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		74DDE6BE281B522B00927102 /* GameBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +109,18 @@
 		74DDE685281B2FF200927102 /* WT Practice */ = {
 			isa = PBXGroup;
 			children = (
+				74DDE6B8281B3D9A00927102 /* Networking.swift */,
+				74DDE6BA281B49D500927102 /* Model.swift */,
 				74DDE686281B2FF200927102 /* AppDelegate.swift */,
 				74DDE688281B2FF200927102 /* SceneDelegate.swift */,
-				74DDE68A281B2FF200927102 /* ViewController.swift */,
+				74DDE68A281B2FF200927102 /* HomeViewController.swift */,
+				74DDE6BE281B522B00927102 /* GameBoardViewController.swift */,
+				74DDE6B6281B3A2200927102 /* API Response.swift */,
 				74DDE68C281B2FF200927102 /* Main.storyboard */,
 				74DDE68F281B2FF400927102 /* Assets.xcassets */,
 				74DDE691281B2FF400927102 /* LaunchScreen.storyboard */,
 				74DDE694281B2FF400927102 /* Info.plist */,
+				74DDE6BC281B515700927102 /* CollectionViewCell.swift */,
 			);
 			path = "WT Practice";
 			sourceTree = "<group>";
@@ -258,9 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74DDE68B281B2FF200927102 /* ViewController.swift in Sources */,
+				74DDE68B281B2FF200927102 /* HomeViewController.swift in Sources */,
+				74DDE6BF281B522B00927102 /* GameBoardViewController.swift in Sources */,
 				74DDE687281B2FF200927102 /* AppDelegate.swift in Sources */,
+				74DDE6B7281B3A2200927102 /* API Response.swift in Sources */,
+				74DDE6BD281B515700927102 /* CollectionViewCell.swift in Sources */,
+				74DDE6BB281B49D500927102 /* Model.swift in Sources */,
 				74DDE689281B2FF200927102 /* SceneDelegate.swift in Sources */,
+				74DDE6B9281B3D9A00927102 /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
