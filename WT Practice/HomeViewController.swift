@@ -9,7 +9,7 @@ import UIKit
 
 
 enum GameType {
-    case practce
+    case practice
     case timed
 }
 
