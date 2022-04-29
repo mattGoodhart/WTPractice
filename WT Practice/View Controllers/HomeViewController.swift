@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var selectedGameType: GameType?
-    var gameManager: GameManager?
+    var employees: [EmployeeResult]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,8 @@ class HomeViewController: UIViewController {
                 self.activityIndicator.stopAnimating()
                 self.timedModeButton.isEnabled = true
                 self.practiceModeButton.isEnabled = true
-                self.gameManager = GameManager(allEmployees: employees)
+                self.employees = employees
+          
             }
         }
     }
@@ -55,9 +56,9 @@ class HomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "GameBoardSegue", let gameBoardViewController = segue.destination as? GameBoardViewController, let gameType = selectedGameType, let newGameManager = gameManager else {
+        guard segue.identifier == "GameBoardSegue", let gameBoardViewController = segue.destination as? GameBoardViewController, let gameType = selectedGameType, let employees = employees else {
             return
         }
-        gameBoardViewController.configure(with: gameType, gameManager: newGameManager)
+        gameBoardViewController.configure(with: gameType, employees: employees)
     }
 }

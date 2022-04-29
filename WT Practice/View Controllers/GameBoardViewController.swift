@@ -14,12 +14,11 @@ protocol GameManagerDelegate {
     func updateScore()
 }
 
-class GameBoardViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, GameManagerDelegate {
+class GameBoardViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var displayedEmployeeName: UILabel!
     
-    var gameManager: GameManager! = nil
     var gameType: GameType!
     var nameInQuestion: String = ""
     var modelForGame: [EmployeeResult] = []
@@ -41,29 +40,25 @@ class GameBoardViewController: UIViewController, UICollectionViewDataSource, UIC
         //setup game board
     }
     
-    func configure(with gameType: GameType, gameManager: GameManager) {
+    func configure(with gameType: GameType, employees: [EmployeeResult]) {
         self.gameType = gameType
-        self.gameManager = gameManager
+        self.modelForGame = employees
         if gameType == .practice {
             self.title = "Practice Mode"
         } else {
             self.title = "Timed Mode"
         }
-        gameManager.delegate = self
     }
     
-    //MARK: GameManagerDelegate
-    func gameDidStart() {
-        
-    }
+    //MARK: Game Logic
     
-    func gameDidEnd() {
-        
-    }
+    //chooseSixRandomEmployees()
     
-    func updateScore() {
-        
-    }
+    //compareCellSelectionToEmployeeName()
+    
+    //endGame()
+    
+    //startGame()
     
 
     //MARK: CollectionViewDataSource
@@ -88,7 +83,7 @@ class GameBoardViewController: UIViewController, UICollectionViewDataSource, UIC
                 //unhide the "correct" image
             } else {
                 //unhide the "incorrect" image
-                //present game over mesage
+                //present game over message with alert controller
             }
         case .timed:
             let timer = Timer.scheduledTimer(timeInterval: 20.0, target: self, selector: #selector(gameTimer), userInfo: nil, repeats: false)

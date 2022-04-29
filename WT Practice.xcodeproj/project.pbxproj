@@ -121,7 +121,6 @@
 				6538F74F681523F26D74E40A /* Pods-WT PracticeTests.debug.xcconfig */,
 				BB9E06BF0C171D790730E665 /* Pods-WT PracticeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -153,10 +152,8 @@
 				74DDE6B8281B3D9A00927102 /* Networking.swift */,
 				74DDE686281B2FF200927102 /* AppDelegate.swift */,
 				74DDE688281B2FF200927102 /* SceneDelegate.swift */,
-				74DDE68A281B2FF200927102 /* HomeViewController.swift */,
-				74DDE6C0281B849200927102 /* GameManager.swift */,
-				74DDE6BE281B522B00927102 /* GameBoardViewController.swift */,
-				74DDE6B6281B3A2200927102 /* API Response.swift */,
+				74DDE6C2281C0D2800927102 /* View Controllers */,
+				74DDE6C3281C0D3D00927102 /* Model */,
 				74DDE68C281B2FF200927102 /* Main.storyboard */,
 				74DDE68F281B2FF400927102 /* Assets.xcassets */,
 				74DDE691281B2FF400927102 /* LaunchScreen.storyboard */,
@@ -181,6 +178,24 @@
 				74DDE6A9281B2FF400927102 /* WT_PracticeUITestsLaunchTests.swift */,
 			);
 			path = "WT PracticeUITests";
+			sourceTree = "<group>";
+		};
+		74DDE6C2281C0D2800927102 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				74DDE6BE281B522B00927102 /* GameBoardViewController.swift */,
+				74DDE68A281B2FF200927102 /* HomeViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		74DDE6C3281C0D3D00927102 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				74DDE6C0281B849200927102 /* GameManager.swift */,
+				74DDE6B6281B3A2200927102 /* API Response.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
