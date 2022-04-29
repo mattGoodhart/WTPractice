@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 protocol GameManagerDelegate {
     func gameDidStart()
@@ -13,7 +14,7 @@ protocol GameManagerDelegate {
     func updateScore()
 }
 
-class GameBoardViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, GameManagerDelegate {
+class GameBoardViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, GameManagerDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var displayedEmployeeName: UILabel!
@@ -28,6 +29,7 @@ class GameBoardViewController: UIViewController, UICollectionViewDataSource, UIC
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
+        collectionView.dataSource = self
     }
 
     @objc func gameTimer() {
@@ -71,6 +73,10 @@ class GameBoardViewController: UIViewController, UICollectionViewDataSource, UIC
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        let url = URL(string: "https://namegame.willowtreeapps.com/images/T0287KQCQ-U01CA6M4T0W-fa7975c0bc34-512.png")
+        
+        cell.employeeImageView.kf.setImage(with: url)
+    
         return cell
     }
     
@@ -89,6 +95,9 @@ class GameBoardViewController: UIViewController, UICollectionViewDataSource, UIC
         default:
             return
         }
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.size.width/2.25, height: collectionView.bounds.size.width/2.25)
     }
 }
 

@@ -41,10 +41,12 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func practiceButtonHit() {
+        self.selectedGameType = .practice
         segueToGameBoard(gametype: .practice)
     }
     
     @IBAction func timedButtonHit() {
+        self.selectedGameType = .timed
         segueToGameBoard(gametype: .timed)
     }
     

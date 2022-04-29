@@ -13,5 +13,5 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var employeeImageView: UIImageView!
     @IBOutlet weak var resultImage: UIImageView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+   // @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 }
