@@ -20,6 +20,7 @@
 		74DDE6B9281B3D9A00927102 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE6B8281B3D9A00927102 /* Networking.swift */; };
 		74DDE6BD281B515700927102 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE6BC281B515700927102 /* CollectionViewCell.swift */; };
 		74DDE6BF281B522B00927102 /* GameBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE6BE281B522B00927102 /* GameBoardViewController.swift */; };
+		74DDE6C1281B849200927102 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE6C0281B849200927102 /* GameManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		74DDE6B8281B3D9A00927102 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		74DDE6BC281B515700927102 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		74DDE6BE281B522B00927102 /* GameBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardViewController.swift; sourceTree = "<group>"; };
+		74DDE6C0281B849200927102 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				74DDE686281B2FF200927102 /* AppDelegate.swift */,
 				74DDE688281B2FF200927102 /* SceneDelegate.swift */,
 				74DDE68A281B2FF200927102 /* HomeViewController.swift */,
+				74DDE6C0281B849200927102 /* GameManager.swift */,
 				74DDE6BE281B522B00927102 /* GameBoardViewController.swift */,
 				74DDE6B6281B3A2200927102 /* API Response.swift */,
 				74DDE68C281B2FF200927102 /* Main.storyboard */,
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74DDE68B281B2FF200927102 /* HomeViewController.swift in Sources */,
+				74DDE6C1281B849200927102 /* GameManager.swift in Sources */,
 				74DDE6BF281B522B00927102 /* GameBoardViewController.swift in Sources */,
 				74DDE687281B2FF200927102 /* AppDelegate.swift in Sources */,
 				74DDE6B7281B3A2200927102 /* API Response.swift in Sources */,

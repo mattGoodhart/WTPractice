@@ -20,7 +20,13 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash screen" translatesAutoresizingMaskIntoConstraints="NO" id="Jct-wd-8uN" userLabel="background">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDs-H6-RJ3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try matching the WillowTree employee to their photo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiR-pG-Rpf">
+                                <rect key="frame" x="84.5" y="629" width="245" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDs-H6-RJ3">
                                 <rect key="frame" x="43.5" y="798" width="327" height="56"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -38,7 +44,7 @@
                                     <action selector="timedButtonHit" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oql-Eu-Hgm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2r-VC-Yw8">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2r-VC-Yw8">
                                 <rect key="frame" x="43.5" y="734" width="327" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="hma-hJ-OLt"/>
@@ -55,25 +61,26 @@
                                     <action selector="practiceButtonHit" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Oe-Lf-xW1"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try matching the WillowTree employee to their photo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiR-pG-Rpf">
-                                <rect key="frame" x="84.5" y="629" width="245" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="4LM-RD-Dld">
+                                <rect key="frame" x="188.5" y="670" width="37" height="64"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="s2r-VC-Yw8" firstAttribute="width" secondItem="pDs-H6-RJ3" secondAttribute="width" id="DcK-wv-lws"/>
+                            <constraint firstItem="4LM-RD-Dld" firstAttribute="centerX" secondItem="s2r-VC-Yw8" secondAttribute="centerX" id="HfJ-bh-uQP"/>
                             <constraint firstItem="s2r-VC-Yw8" firstAttribute="centerX" secondItem="pDs-H6-RJ3" secondAttribute="centerX" id="KSC-YN-GHU"/>
                             <constraint firstItem="CiR-pG-Rpf" firstAttribute="width" secondItem="pDs-H6-RJ3" secondAttribute="width" multiplier="0.75" id="WyS-tb-AAU"/>
                             <constraint firstItem="Jct-wd-8uN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dkx-Bm-YyO"/>
+                            <constraint firstItem="4LM-RD-Dld" firstAttribute="top" secondItem="CiR-pG-Rpf" secondAttribute="bottom" id="gZU-Id-qpO"/>
                             <constraint firstItem="Jct-wd-8uN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hJW-D2-PY1"/>
                             <constraint firstItem="CiR-pG-Rpf" firstAttribute="centerX" secondItem="pDs-H6-RJ3" secondAttribute="centerX" id="hSB-zE-r09"/>
                             <constraint firstAttribute="bottom" secondItem="Jct-wd-8uN" secondAttribute="bottom" id="iCO-c4-9BI"/>
                             <constraint firstItem="pDs-H6-RJ3" firstAttribute="top" secondItem="CiR-pG-Rpf" secondAttribute="bottom" constant="128" id="pTr-nc-4iM"/>
                             <constraint firstItem="pDs-H6-RJ3" firstAttribute="top" secondItem="s2r-VC-Yw8" secondAttribute="bottom" constant="8" symbolic="YES" id="rTw-Ek-qiX"/>
+                            <constraint firstItem="4LM-RD-Dld" firstAttribute="bottom" secondItem="s2r-VC-Yw8" secondAttribute="top" id="rrF-ry-4WG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pDs-H6-RJ3" secondAttribute="bottom" constant="8" id="ryy-dO-6cB"/>
                             <constraint firstItem="pDs-H6-RJ3" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" constant="-87" id="vtA-UQ-Pks"/>
                             <constraint firstItem="pDs-H6-RJ3" firstAttribute="centerX" secondItem="Jct-wd-8uN" secondAttribute="centerX" id="wLj-ye-H11"/>
@@ -81,6 +88,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="4LM-RD-Dld" id="H8E-Jn-rYW"/>
                         <outlet property="practiceModeButton" destination="s2r-VC-Yw8" id="KSp-5H-Tk7"/>
                         <outlet property="timedModeButton" destination="pDs-H6-RJ3" id="vRB-h3-9QY"/>
                         <segue destination="nq5-dE-eBK" kind="presentation" identifier="GameBoardSegue" modalPresentationStyle="fullScreen" id="74a-Rb-2xX"/>

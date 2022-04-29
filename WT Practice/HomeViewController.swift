@@ -17,8 +17,28 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var practiceModeButton: UIButton!
     @IBOutlet weak var timedModeButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var selectedGameType: GameType?
+    var gameManager: GameManager?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        Networking.shared.fetchAndParseJSON() { employees in
+            DispatchQueue.main.async {
+                self.activityIndicator.stopAnimating()
+                self.timedModeButton.isEnabled = true
+                self.practiceModeButton.isEnabled = true
+                self.gameManager = GameManager(allEmployees: employees)
+            }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+  
+    }
     
     @IBAction func practiceButtonHit() {
         segueToGameBoard(gametype: .practice)
@@ -33,9 +53,9 @@ class HomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "GameBoardSegue", let gameBoardViewController = segue.destination as? GameBoardViewController, let gameType = selectedGameType else {
+        guard segue.identifier == "GameBoardSegue", let gameBoardViewController = segue.destination as? GameBoardViewController, let gameType = selectedGameType, let newGameManager = gameManager else {
             return
         }
-        gameBoardViewController.configure(with: gameType)
+        gameBoardViewController.configure(with: gameType, gameManager: newGameManager)
     }
 }

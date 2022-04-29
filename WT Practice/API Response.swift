@@ -7,10 +7,6 @@
 
 import Foundation
 
-struct APIResponse: Codable {
-    let employees: [EmployeeResult]
-}
-
 struct EmployeeResult: Codable {
     let firstName: String
     let headshot: PhotoInfo
@@ -18,5 +14,5 @@ struct EmployeeResult: Codable {
 }
 
 struct PhotoInfo: Codable {
-    let url: String
+    let url: String?
 }

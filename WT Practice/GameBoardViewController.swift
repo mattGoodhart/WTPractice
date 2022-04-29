@@ -7,61 +7,64 @@
 
 import UIKit
 
-class GameBoardViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    
+protocol GameManagerDelegate {
+    func gameDidStart()
+    func gameDidEnd()
+    func updateScore()
+}
+
+class GameBoardViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, GameManagerDelegate {
+
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var displayedEmployeeName: UILabel!
     
-    let endpointString: String = "https://namegame.willowtreeapps.com/api/v1.0/profiles"
-    
+    var gameManager: GameManager! = nil
     var gameType: GameType!
-    
     var nameInQuestion: String = ""
-    
     var modelForGame: [EmployeeResult] = []
-    
     let timerSeconds: Int = 20
-    
     var score: Int = 0
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
-        
-        
-        // query and parse the json while showing activity indicator and disabling buttons
-        //setUpGameType()
     }
-    
+
     @objc func gameTimer() {
         //
     }
     
-    func configure(with gameType: GameType) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //setup game board
+    }
+    
+    func configure(with gameType: GameType, gameManager: GameManager) {
         self.gameType = gameType
+        self.gameManager = gameManager
         if gameType == .practice {
             self.title = "Practice Mode"
         } else {
             self.title = "Timed Mode"
         }
+        gameManager.delegate = self
     }
     
-    func fetchEmployeeInfo() {
-        guard let endpoint = URL(string: endpointString) else {
-            print("Couldn't create URL")
-            return
-        }
-        
-        Networking.shared.fetchAndParseJSON(url: endpoint) { employees in
-            
-            
-        }
-        
+    //MARK: GameManagerDelegate
+    func gameDidStart() {
         
     }
     
+    func gameDidEnd() {
+        
+    }
+    
+    func updateScore() {
+        
+    }
+    
+
+    //MARK: CollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 6
     }
