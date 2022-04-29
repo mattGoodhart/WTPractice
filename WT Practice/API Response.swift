@@ -2,16 +2,16 @@
 //  API Response.swift
 //  WT Practice
 //
-//  Created by Alicia Goodhart on 4/28/22.
+//  Created by Matt Goodhart on 4/28/22.
 //
 
 import Foundation
 
 struct APIResponse: Codable {
-    let employees: [EmployeeResults]
+    let employees: [EmployeeResult]
 }
 
-struct EmployeeResults: Codable {
+struct EmployeeResult: Codable {
     let firstName: String
     let headshot: PhotoInfo
     let lastName: String

@@ -16,17 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame" translatesAutoresizingMaskIntoConstraints="NO" id="8Uc-7X-n8y">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash screen" translatesAutoresizingMaskIntoConstraints="NO" id="8Uc-7X-n8y">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Uc-7X-n8y" secondAttribute="bottom" id="Fhs-so-SwH"/>
-                            <constraint firstItem="8Uc-7X-n8y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dpS-At-ENE"/>
-                            <constraint firstItem="8Uc-7X-n8y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gcz-0Z-tLT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Uc-7X-n8y" secondAttribute="trailing" id="xBy-zm-PFz"/>
+                            <constraint firstAttribute="bottom" secondItem="8Uc-7X-n8y" secondAttribute="bottom" id="Fhs-so-SwH"/>
+                            <constraint firstItem="8Uc-7X-n8y" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="dpS-At-ENE"/>
+                            <constraint firstItem="8Uc-7X-n8y" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="gcz-0Z-tLT"/>
+                            <constraint firstAttribute="trailing" secondItem="8Uc-7X-n8y" secondAttribute="trailing" id="xBy-zm-PFz"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,7 +36,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Frame" width="278" height="271"/>
+        <image name="splash screen" width="375" height="812"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

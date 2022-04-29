@@ -18,7 +18,6 @@
 		74DDE6AA281B2FF400927102 /* WT_PracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE6A9281B2FF400927102 /* WT_PracticeUITestsLaunchTests.swift */; };
 		74DDE6B7281B3A2200927102 /* API Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE6B6281B3A2200927102 /* API Response.swift */; };
 		74DDE6B9281B3D9A00927102 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE6B8281B3D9A00927102 /* Networking.swift */; };
-		74DDE6BB281B49D500927102 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE6BA281B49D500927102 /* Model.swift */; };
 		74DDE6BD281B515700927102 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE6BC281B515700927102 /* CollectionViewCell.swift */; };
 		74DDE6BF281B522B00927102 /* GameBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DDE6BE281B522B00927102 /* GameBoardViewController.swift */; };
 /* End PBXBuildFile section */
@@ -56,7 +55,6 @@
 		74DDE6A9281B2FF400927102 /* WT_PracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WT_PracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		74DDE6B6281B3A2200927102 /* API Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Response.swift"; sourceTree = "<group>"; };
 		74DDE6B8281B3D9A00927102 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		74DDE6BA281B49D500927102 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		74DDE6BC281B515700927102 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		74DDE6BE281B522B00927102 /* GameBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				74DDE6B8281B3D9A00927102 /* Networking.swift */,
-				74DDE6BA281B49D500927102 /* Model.swift */,
 				74DDE686281B2FF200927102 /* AppDelegate.swift */,
 				74DDE688281B2FF200927102 /* SceneDelegate.swift */,
 				74DDE68A281B2FF200927102 /* HomeViewController.swift */,
@@ -278,7 +275,6 @@
 				74DDE687281B2FF200927102 /* AppDelegate.swift in Sources */,
 				74DDE6B7281B3A2200927102 /* API Response.swift in Sources */,
 				74DDE6BD281B515700927102 /* CollectionViewCell.swift in Sources */,
-				74DDE6BB281B49D500927102 /* Model.swift in Sources */,
 				74DDE689281B2FF200927102 /* SceneDelegate.swift in Sources */,
 				74DDE6B9281B3D9A00927102 /* Networking.swift in Sources */,
 			);

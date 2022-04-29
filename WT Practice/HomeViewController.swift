@@ -18,10 +18,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var practiceModeButton: UIButton!
     @IBOutlet weak var timedModeButton: UIButton!
     
-    
+    var selectedGameType: GameType?
     
     @IBAction func practiceButtonHit() {
-        segueToGameBoard(gametype: .practce)
+        segueToGameBoard(gametype: .practice)
     }
     
     @IBAction func timedButtonHit() {
@@ -30,15 +30,12 @@ class HomeViewController: UIViewController {
     
     func segueToGameBoard(gametype: GameType) {
         performSegue(withIdentifier: "GameBoardSegue", sender: self)
-        
-        // let gameBoard =  //instantiateViewController(withIdentifier: "GameBoardViewController")
-        // gameBoard.title = "Practice Mode"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "GameBoardSegue" {
-            let gameBoardViewController = segue.destination as! GameBoardViewController
-            //
+        guard segue.identifier == "GameBoardSegue", let gameBoardViewController = segue.destination as? GameBoardViewController, let gameType = selectedGameType else {
+            return
         }
+        gameBoardViewController.configure(with: gameType)
     }
 }

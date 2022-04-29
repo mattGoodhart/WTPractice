@@ -10,14 +10,15 @@ import UIKit
 class GameBoardViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var displayedEmployeeName: UILabel!
     
     let endpointString: String = "https://namegame.willowtreeapps.com/api/v1.0/profiles"
-
-    let gameType : GameType = .practice
+    
+    var gameType: GameType!
     
     var nameInQuestion: String = ""
     
-    var modelForGame: [EmployeeResults] = []
+    var modelForGame: [EmployeeResult] = []
     
     let timerSeconds: Int = 20
     
@@ -31,14 +32,15 @@ class GameBoardViewController: UIViewController, UICollectionViewDataSource, UIC
         
         
         // query and parse the json while showing activity indicator and disabling buttons
-        setUpGameType()
+        //setUpGameType()
     }
     
     @objc func gameTimer() {
         //
     }
     
-    func setUpGameType() {
+    func configure(with gameType: GameType) {
+        self.gameType = gameType
         if gameType == .practice {
             self.title = "Practice Mode"
         } else {
@@ -52,7 +54,10 @@ class GameBoardViewController: UIViewController, UICollectionViewDataSource, UIC
             return
         }
         
-        Networking.shared.fetchAndParseJSON(url: endpoint)
+        Networking.shared.fetchAndParseJSON(url: endpoint) { employees in
+            
+            
+        }
         
         
     }
@@ -67,7 +72,7 @@ class GameBoardViewController: UIViewController, UICollectionViewDataSource, UIC
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath:IndexPath) {
-      //process game logic based on game type
+        //process game logic based on game type
         switch gameType {
         case .practice:
             if nameInQuestion == (self.modelForGame[(indexPath).row].firstName + " " + self.modelForGame[(indexPath).row].lastName) {
@@ -78,6 +83,8 @@ class GameBoardViewController: UIViewController, UICollectionViewDataSource, UIC
             }
         case .timed:
             let timer = Timer.scheduledTimer(timeInterval: 20.0, target: self, selector: #selector(gameTimer), userInfo: nil, repeats: false)
+        default:
+            return
         }
     }
 }
